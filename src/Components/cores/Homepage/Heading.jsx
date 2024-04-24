@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Heading = ({text}) => {
   return (
-    <span className='font-bold text-blue-300'>
+    <span className='font-bold text-blue-100'>
         {" "}
         {text}
     </span>
