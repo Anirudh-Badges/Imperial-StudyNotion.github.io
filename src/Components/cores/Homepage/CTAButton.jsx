@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Button = ({ text, active, path }) => {
+export const CTAButton = ({ text, active, path }) => {
   return (
     <Link to={path}>
       <div 
@@ -13,3 +13,5 @@ export const Button = ({ text, active, path }) => {
     </Link>
   )
 }
+
+
