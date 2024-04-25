@@ -5,10 +5,12 @@ import { Heading } from "../Components/cores/Homepage/Heading";
 import { CTAButton } from "../Components/cores/Homepage/CTAButton";
 import banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../Components/cores/Homepage/CodeBlocks";
+import GetSkill from "../Components/cores/Homepage/GetSkill";
 
 const Homepage = () => {
   return (
     <div>
+      {/* HomePage-Upper-section-1  */}
       <div className="relative w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-between gap-8 text-white">
         <Link to={"/signup"}>
           <div className="group mx-auto mt-16 w-fit rounded-full bg-richblack-800  text-richblack-200 p-1 font-bold  drop-shadow-[0_1.5px_rgba(255,255,0,0.25)] transition-all duration-200 hover:scale-95 hover:drop-shadow-none">
@@ -56,17 +58,20 @@ const Homepage = () => {
           <CodeBlocks
             position={"lg:flex-row"}
             heading={
-              <div className="text-4xl font-semibold">
+              <div
+                className="text-4xl font-semiboh
+              ld"
+              >
                 Unlock Your
-                <Heading text={"coding potential"} /> with our online courses.
+                <Heading text={" coding potential "} /> with our online courses.
               </div>
             }
             subheading={
               "Our courese are designed and taugnt by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
             }
             ctabtn1={{
-              text: "Try it Yourself",
               path: "/signup",
+              text: "Try it Yourself",
               active: true,
             }}
             ctabtn2={{
@@ -109,8 +114,29 @@ const Homepage = () => {
           />
         </div>
 
-        
+        {/*Explore-Section  */}
       </div>
+
+      {/* Homepage-middle-section2 */}
+      <div className="bg-pure-greys-5 text-richblack-700">
+        <div className="homepage_bg h-[320px]">
+          <div className="mx-auto flex w-11/12 flex-col max-w-maxContent justify-between items-center gap-8">
+            <div className="lg:h-[150px]"></div>
+            <div className="flex flex-row gap-8 text-white lg:mt-8 ">
+              <CTAButton text={<div className='flex items-center gap-2'>
+                                    Explore Full Catalog
+                                    <FaArrowRight />
+                                </div>} active={true} path={"/signup"}
+              >
+  
+              </CTAButton>
+              <CTAButton text={"Learn more"} active={false} path={"/signup"} />
+            </div>
+          </div>
+        </div>
+        <GetSkill/>
+      </div>
+      
     </div>
   );
 };
