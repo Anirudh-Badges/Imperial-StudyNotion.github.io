@@ -107,12 +107,11 @@ const Homepage = () => {
             codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
             backgroundGradient={<div className="codeblock2 absolute"></div>}
           />
-        </div>
+        </div>    
 
         
       </div>
     </div>
   );
-};
-
-export default Homepage;
+}
+export default Homepage

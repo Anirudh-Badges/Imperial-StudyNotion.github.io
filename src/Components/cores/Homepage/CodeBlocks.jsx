@@ -1,6 +1,6 @@
 import React from "react";
 import {CTAButton} from "./CTAButton";
-import { TypeAnimation } from "react-type-animation"
+import { TypeAnimation } from "react-type-animation";
 import { FaArrowRight } from "react-icons/fa";
 
 const CodeBlocks = ({
@@ -28,7 +28,11 @@ const CodeBlocks = ({
                 {/* Button Group  */}
                 <div className="flex gap-7 mt-7">
                     <CTAButton active={ctabtn1.active} path={ctabtn1.path}>
-                       {ctabtn1.text}
+                        <div className=" flex  gap-7 items-center">
+                            {ctabtn1.text}
+                            <FaArrowRight/>
+                        </div>
+                       
                     </CTAButton>
                     <CTAButton active={ctabtn2.active} path={ctabtn2.path}>
                         {ctabtn2.text}
