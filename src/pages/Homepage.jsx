@@ -6,6 +6,7 @@ import { CTAButton } from "../Components/cores/Homepage/CTAButton";
 import banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../Components/cores/Homepage/CodeBlocks";
 import GetSkill from "../Components/cores/Homepage/GetSkill";
+import Timeline from "../Components/cores/Homepage/Timeline";
 
 const Homepage = () => {
   return (
@@ -123,20 +124,22 @@ const Homepage = () => {
           <div className="mx-auto flex w-11/12 flex-col max-w-maxContent justify-between items-center gap-8">
             <div className="lg:h-[150px]"></div>
             <div className="flex flex-row gap-8 text-white lg:mt-8 ">
-              <CTAButton text={<div className='flex items-center gap-2'>
-                                    Explore Full Catalog
-                                    <FaArrowRight />
-                                </div>} active={true} path={"/signup"}
-              >
-  
-              </CTAButton>
+              <CTAButton
+                text={
+                  <div className="flex items-center gap-2">
+                    Explore Full Catalog
+                    <FaArrowRight />
+                  </div>
+                }
+                active={true}
+                path={"/signup"}
+              ></CTAButton>
               <CTAButton text={"Learn more"} active={false} path={"/signup"} />
             </div>
           </div>
         </div>
-        <GetSkill/>
+        <GetSkill />
       </div>
-      
     </div>
   );
 };

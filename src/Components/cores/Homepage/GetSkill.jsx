@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading } from "./Heading";
 import { CTAButton } from "./CTAButton";
+import TimeLine from "../../../data/TimeLineData";
 
 const GetSkill = () => {
   return (
