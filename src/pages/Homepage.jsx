@@ -6,6 +6,7 @@ import { CTAButton } from "../Components/cores/Homepage/CTAButton";
 import banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../Components/cores/Homepage/CodeBlocks";
 import GetSkill from "../Components/cores/Homepage/GetSkill";
+import Footer from "../Components/Comman/Footer";
 
 const Homepage = () => {
   return (
@@ -136,7 +137,9 @@ const Homepage = () => {
         </div>
         <GetSkill/>
       </div>
-      
+      <div className=" bg-richblack-800"> 
+      <Footer/>
+      </div>
     </div>
   );
 }
