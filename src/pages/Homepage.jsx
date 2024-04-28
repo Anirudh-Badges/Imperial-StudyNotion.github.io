@@ -5,10 +5,9 @@ import { Heading } from "../Components/cores/Homepage/Heading";
 import { CTAButton } from "../Components/cores/Homepage/CTAButton";
 import banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../Components/cores/Homepage/CodeBlocks";
-import GetSkill from "../Components/cores/Homepage/GetSkill";
-import Footer from "../Components/Comman/Footer";
-import Timeline from "../Components/cores/Homepage/Timeline";
-import LearnLanguage from "../Components/cores/Homepage/LearnLanguage";
+import TimeLineSection from "../Components/cores/Homepage/TimeLineSection";
+import InstructorSection from "../Components/cores/Homepage/InstructorSection";
+import ReviewSection from "../Components/cores/Homepage/ReviewSection";
 
 const Homepage = () => {
   return (
@@ -140,9 +139,35 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <GetSkill />
-        <LearnLanguage/>
-      </div> 
+        <div className="w-11/12 mx-auto flex sm:flex-col justify-between items-center max-w-maxContent gap-8">
+          <div className="mb-10 mt-[-100px] flex flex-col justify-between gap-7 lg:mt-20 lg:flex-row lg:gap-0">
+            <div className="text-richblack-900 text-4xl font-semibold lg:w-[45%]">
+              Get the Skills you need for a
+              <Heading text={"job that is in demand."} />
+            </div>
+            <div className="flex flex-col items-start gap-10 lg:w-[45%]">
+              <div className="text-[16px] font-normal">
+                The modern StudyNotion is the dictates its own terms. Today, to
+                be a competitive specialist requires more than professional
+                skills
+              </div>
+              <CTAButton text={"Learn more"} active={true} path={"/signup"} />
+            </div>
+          </div>
+
+          {/* Timeline-Section */}
+          <TimeLineSection />
+
+          {/* Learning Language Section - Section 3 */}
+        </div>
+      </div>
+      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white ">
+        {/* Instructor-Section  */}
+        <InstructorSection />
+        
+        {/* Review-Section */}
+        <ReviewSection />
+      </div>
     </div>
   );
 }
