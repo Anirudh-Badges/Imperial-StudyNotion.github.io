@@ -9,6 +9,7 @@ import TimeLineSection from "../Components/cores/Homepage/TimeLineSection";
 import InstructorSection from "../Components/cores/Homepage/InstructorSection";
 import ReviewSection from "../Components/cores/Homepage/ReviewSection";
 import LearnLanguage from "../Components/cores/Homepage/LearnLanguage";
+import Footer from "../Components/Comman/Footer";
 
 const Homepage = () => {
   return (
@@ -170,6 +171,9 @@ const Homepage = () => {
         {/* Review-Section */}
         <ReviewSection />
       </div>
+
+      {/* footer-section */}
+      <Footer/>
     </div>
   );
 }
