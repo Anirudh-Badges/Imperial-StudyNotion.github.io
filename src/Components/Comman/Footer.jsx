@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             {
 
-            }
+}
           </div>
         </div>
         {/* <div className='w-0 h-fit border-[8px] border-richblack-700'></div> */}
