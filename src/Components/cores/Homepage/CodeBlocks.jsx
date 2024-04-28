@@ -29,7 +29,10 @@ const CodeBlocks = ({
         {/* Button Group  */}
         <div className="flex gap-7 mt-7">
           <CTAButton
-            text={ctabtn1.text}
+            text={<div className="flex gap-3 items-center">
+              {ctabtn1.text}
+              <FaArrowRight/>
+            </div>}
             active={ctabtn1.active}
             path={ctabtn1.path}
           ></CTAButton>
