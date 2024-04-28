@@ -8,6 +8,7 @@ import CodeBlocks from "../Components/cores/Homepage/CodeBlocks";
 import TimeLineSection from "../Components/cores/Homepage/TimeLineSection";
 import InstructorSection from "../Components/cores/Homepage/InstructorSection";
 import ReviewSection from "../Components/cores/Homepage/ReviewSection";
+import LearnLanguage from "../Components/cores/Homepage/LearnLanguage";
 import Footer from "../Components/Comman/Footer";
 
 const Homepage = () => {
@@ -115,7 +116,7 @@ const Homepage = () => {
             codeblock={`import React from "react";\n import CTAButton from "./Button";\nimport TypeAnimation from "react-type";\nimport { FaArrowRight } from "react-icons/fa";\n\nconst Home = () => {\nreturn (\n<div>Home</div>\n)\n}\nexport default Home;`}
             backgroundGradient={<div className="codeblock2 absolute"></div>}
           />
-        </div>
+        </div>    
 
         {/*Explore-Section  */}
       </div>
@@ -160,6 +161,7 @@ const Homepage = () => {
           <TimeLineSection />
 
           {/* Learning Language Section - Section 3 */}
+          <LearnLanguage/>
         </div>
       </div>
       <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white ">
@@ -174,6 +176,5 @@ const Homepage = () => {
       <Footer/>
     </div>
   );
-};
-
-export default Homepage;
+}
+export default Homepage

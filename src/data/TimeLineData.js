@@ -3,7 +3,7 @@ import Logo2 from '../assets/TimeLineLogo/Logo2.svg';
 import Logo3 from '../assets/TimeLineLogo/Logo3.svg';
 import Logo4 from '../assets/TimeLineLogo/Logo4.svg';
 
-const TimeLine = [
+const TimeLineData = [
     {
       id: 1,
       Logo: Logo1,
@@ -30,4 +30,4 @@ const TimeLine = [
     },
 ];
 
-export default TimeLine;
+export default TimeLineData;
