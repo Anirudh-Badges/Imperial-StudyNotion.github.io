@@ -12,7 +12,7 @@ const InstructorSection = () => {
           <img
             src={InstructorImage}
             alt=""
-            className="shadow-white shadow-[-20px_-20px_0px_px] "
+            className="shadow-white shadow-[-20px_-20px_0px_px] object-contain "
           />
         </div>
         <div className="lg:w-[50%] flex flex-col gap-4">

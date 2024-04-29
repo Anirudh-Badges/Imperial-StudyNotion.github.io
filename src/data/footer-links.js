@@ -53,51 +53,6 @@ export const FooterLink2 = [
     ]
   }
 ];
-export const FooterLink1 =[
-  {
-    title : "Company",
-    links :[
-      {title: "Career", link:"/career"},
-      {title: "About", link:"/about"},
-      {title: "Affilated", link:"/affilated"}
-    ]
-  },
-  {
-    title : "Resources",
-    links :[
-      {title: "Articles", link:"/articles"},
-      {title: "Blog", link:"/blog"},
-      {title: "Chart Sheet", link:"/chart_sheet"},
-      {title: "Code challenges", link:"/code_challenges"},
-      {title: "Docs", link:"/docs"},
-      {title: "Projects", link:"/projects"},
-      {title: "Videos", link:"/videos"},
-      {title: "Workshop", link:"/workshop"}
-    ]
-  },
-  {
-    title : "Support",
-    links :[
-      {title: "Help Center", link:"/help_center"}
-    ]
-  },
-  {
-    title : "Plans",
-    links :[
-      {title: "Paid membership", link:"/paid_membership"},
-      {title: "For Students", link:"/for_students"},
-      {title: "Business Solutions", link:"/business_solutions"}
-    ]
-  },
-  {
-    title : "Community",
-    links :[
-      {title: "Forums", link:"/forums"},
-      {title: "Chapter", link:"/chapter"},
-      {title: "Events", link:"/events"}
-    ]
-  }
-];
 
 
 export const FooterLink0= [
