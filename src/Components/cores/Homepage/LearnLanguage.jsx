@@ -7,23 +7,23 @@ import { CTAButton } from './CTAButton';
 
 const LearnLanguage = () => {
   return (
-    <div className='mt-[150px]'>
+    <div className='mt-[150px] sm:w-[50%]'>
         <div className=' flex flex-col items-center'>
-            <div className='text-4xl font-semibold text-center'>
+            <div className='text-4xl font-semibold text-center sm:w-[70%] sm:items-start xs:w-[50%]'>
                 Your Swiss Knife for
                 <Heading text={"learning any language"}/>
             </div>
-            <div className=' text-center text-richblack-600 mx-auto text-base mt-3 font-medium w-[45%]'>
+            <div className=' text-center text-richblack-600 mx-auto text-base mt-3 font-medium w-[45%] sm:w-[60%]'>
                 Using spin making learning multiple languages easy, with 20+ languages realistic, voice-over,
                 progress tracking, custom schedule and more.
             </div>
 
-            <div className='flex flex-row items-center justify-center mt-5 '>
+            <div className='flex flex-row items-center justify-center mt-5 sm:flex-col xs:flex-col'>
                 <img src={Know_your_progress} alt="img1"
-                className=' -mr-28' />
-                <img src={Compare_with_others} alt="img2"/>
+                className=' -mr-28 ' />
+                <img src={Compare_with_others} alt="img2" className='sm:-mt-16 sm:ml-16'/>
                 <img src={Plan_your_lessons} alt="img3" 
-                className=' -ml-36'/>
+                className=' -ml-36 sm:mt-[-104px] sm:ml-16'/>
             </div>
 
             <div className='mt-3 mb-20 '>
