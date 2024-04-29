@@ -9,7 +9,6 @@ import TimeLineSection from "../Components/cores/Homepage/TimeLineSection";
 import InstructorSection from "../Components/cores/Homepage/InstructorSection";
 import ReviewSection from "../Components/cores/Homepage/ReviewSection";
 import LearnLanguage from "../Components/cores/Homepage/LearnLanguage";
-import Footer from '../Components/Comman/Footer';
 
 const Homepage = () => {
   return (
@@ -160,10 +159,9 @@ const Homepage = () => {
           {/* Timeline-Section */}
           <TimeLineSection />
 
-          
+          {/* Learning Language Section - Section 3 */}
+
         </div>
-        {/* Learning Language Section - Section 3 */}
-        <LearnLanguage/>
       </div>
       <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white ">
         {/* Instructor-Section  */}
@@ -172,7 +170,6 @@ const Homepage = () => {
         {/* Review-Section */}
         <ReviewSection />
       </div>
-      <Footer/>
     </div>
   );
 }
