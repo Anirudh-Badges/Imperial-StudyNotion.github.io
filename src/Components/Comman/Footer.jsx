@@ -18,6 +18,45 @@ const company = [
   },
 ];
 
+const resources = [
+  {
+    title: "Articles",
+    link: "/articles",
+  },
+  {
+    title: "Blog",
+    link: "/blog",
+  },
+  {
+    title: "Chart Sheet",
+    link: "/chart Sheet",
+  },
+  {
+    title: "Code challenges",
+    link: "/code challenges",
+  },
+  {
+    title: "Docs",
+    link: "/docs",
+  },
+  {
+    title: "Projects",
+    link: "/projects",
+  },
+  {
+    title: "Videos",
+    link: "/videos",
+  },
+  {
+    title: "Workspaces",
+    link: "/workspaces",
+  },
+];
+
+const Plans = ["Paid memberships", "For students", "Business solutions"];
+
+const Community = ["Forums", "Chapters", "Events"];
+
 const Footer = () => {
   return (
     <div className="bg-richblack-800">
@@ -52,14 +91,70 @@ const Footer = () => {
               </div>
               <div></div>
             </div>
-          </div>
-          <div className="w-[30%] lg:w-[30%] flex flex-col gap-3 mb-7 ">
-            <div>
-              {
 
-              }
+            <div className="w-[30%] lg:w-[30%] flex flex-col gap-3 mb-7 ">
+              <h1 className="text-[16px] text-richblack-100 font-semibold">
+                Resources
+              </h1>
+              <div>
+                {resources.map((ele, i) => {
+                  return (
+                    <div
+                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                      key={i}
+                    >
+                      <Link to={ele.link}>{ele.title}</Link>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
+                Support
+              </h1>
+
+              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200">
+                <Link to={"/help-center"}>Help Center</Link>
+              </div>
             </div>
-            
+
+            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0 ">
+              <h1 className="text-[16px] text-richblack-100 font-semibold">
+                Plans
+              </h1>
+              <div>
+                {Plans.map((ele, i) => {
+                  return (
+                    <div
+                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                      key={i}
+                    >
+                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                        {ele}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <h1 className="text-[16px] font-semibold text-richblack-100">
+                Community
+              </h1>
+              <div>
+                {Community.map((ele, i) => {
+                  return (
+                    <div
+                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                      key={i}
+                    >
+                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                        {ele}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
