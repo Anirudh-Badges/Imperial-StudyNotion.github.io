@@ -55,9 +55,5 @@ export const FooterLink2 = [
 ];
 
 
-export const FooterLink0= [
-  {title : "Privacy Policy", link:"/privacy_policy"},
-  {title : "Cookie Policy", link:"/cookie_policy"},
-  {title : "Terms", link:"/terms"}  
-];
+
 

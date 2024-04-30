@@ -161,7 +161,7 @@ const Homepage = () => {
           <TimeLineSection />
 
           {/* Learning Language Section - Section 3 */}
-
+          <LearnLanguage/>
         </div>
       </div>
       <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white ">
