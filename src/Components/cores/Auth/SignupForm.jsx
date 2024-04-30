@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import countrycode from "../../../data/countrycode.json";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -75,7 +75,7 @@ const SignupForm = () => {
           type="email"
           required
           name="email"
-          placeholder="Enter your Email Address"
+          placeholder="Enter Email Address"
           value={emailAddress}
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
@@ -107,7 +107,7 @@ const SignupForm = () => {
         </label>
       </div>
       <div className="flex gap-x-4">
-        <label>
+        <label className="relative">
           <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
             Password <sup className="text-pink-200">*</sup>
           </p>
@@ -135,7 +135,7 @@ const SignupForm = () => {
           </span>
         </label>
 
-        <label>
+        <label className="relative">
           <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
             Confirm Password<sup className="text-pink-200">*</sup>
           </p>
