@@ -2,13 +2,21 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Homepage from "./pages/Homepage";
 import Navbar from "./Components/Comman/Navbar";
+import OpenRoutes from "./Components/cores/Auth/OpenRoutes";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
     <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage/>}/>
+        <Route path="/" element={<Homepage />} />
+        
+
+
+        <Route path="/signup" element={<OpenRoutes>
+          <Signup/>
+        </OpenRoutes>}/>
       </Routes>
     </div>
   );

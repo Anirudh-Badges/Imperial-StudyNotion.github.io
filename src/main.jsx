@@ -4,10 +4,20 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import {Provider} from 'react-redux';
+import CombineReducer from './Reducers/reducer.js'
+import { configureStore } from "@reduxjs/toolkit";
+
+const store = configureStore({
+  reducer: CombineReducer,
+})
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
     <App />
     <Toaster />
   </BrowserRouter>
+  </Provider>
 );
