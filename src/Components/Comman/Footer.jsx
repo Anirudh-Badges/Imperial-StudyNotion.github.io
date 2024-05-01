@@ -165,9 +165,9 @@ const Footer = () => {
   return (
     <div className="bg-richblack-800">
       <div className="flex lg:flex-row gap-8 justify-between items-center w-11/12 mx-auto max-w-maxContent relative py-14 text-richblack-400 ">
-        <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
+        <div className=" w-[100%] flex flex-col lg:flex-row pb-5">
           {/* section-1  */}
-          <div className="lg:w-[50%] flex flex-row justify-between items-center gap-3 pl-3 lg:pr-10 lg:border-r lg:border-richblack-400 sm:mt-20 ">
+          <div className="lg:w-[55%] flex flex-row justify-between items-center gap-3 pl-3 lg:pr-10  sm:mt-20 -ml-20 ">
             <div className="w-[30%] lg:w-[30%] flex flex-col gap-3 mb-7 lg:pl-0 -mt-60 sm:-mr-24 sm:ml-12 ">
               <img src={Logo} alt="" className="w-60 h-10" />
 
@@ -260,7 +260,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
+          <div>
+            <div className=" lg:border-[1px] lg:border-richblack-700 h-[450px] w-0"></div>
+          </div>
           {/* section-2  */}
           <div className="lg:w-[50%] flex flex-row justify-between items-center gap-3 pl-16  ">
             <div className="w-[40%] flex flex-col gap-3 mb-7 lg:pl-0 mt-4">
@@ -320,11 +322,14 @@ const Footer = () => {
 
           </div>
 
+          
         </div>
-
       </div>
-      <div className="flex flex-row items-center text-richblack-400 -mt-10 gap-48 sm:ml-[410px] mx-auto">
-        <div className="flex flex-row w-[50%] gap-5 ">
+      <div className="w-10/12 mx-auto flex flex-col  items-start ">
+            <div className=" lg:border-[1px] lg:border-b lg:border-richblack-700 w-full h-0 -mt-11"></div>
+
+             <div className="flex flex-row items-center justify-between gap-[400px] text-richblack-400  sm:ml-[410px] ">
+        <div className="flex flex-row w-[50%] gap-5  ">
           {bottom.map((ele, i) => {
             return (
               <div
@@ -338,10 +343,13 @@ const Footer = () => {
             );
           })}
         </div>
-        <div className=" text-[16px] ">
+        <div className=" text-[16px] flex ">
           Made by Amisha@ 2024
         </div>
       </div>
+      </div>
+
+     
     </div>
   );
 };
