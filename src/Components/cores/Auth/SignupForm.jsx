@@ -102,9 +102,8 @@ const SignupForm = () => {
             required
             placeholder="12345 67890"
             value={phonenumber}
-            name="tel"
-            onChange={handleOnChange}
             name="phonenumber"
+            onChange={handleOnChange}
             style={{
               boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
             }}
