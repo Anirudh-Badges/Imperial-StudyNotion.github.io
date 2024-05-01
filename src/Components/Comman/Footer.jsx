@@ -328,7 +328,7 @@ const Footer = () => {
       <div className="w-10/12 mx-auto flex flex-col  items-start ">
             <div className=" lg:border-[1px] lg:border-b lg:border-richblack-700 w-full h-0 -mt-11"></div>
 
-             <div className="flex flex-row items-center justify-between gap-[400px] text-richblack-400  sm:ml-[410px] ">
+             <div className="flex flex-row items-center justify-between gap-[400px] text-richblack-400  sm:ml-[410px]` ">
         <div className="flex flex-row w-[50%] gap-5  ">
           {bottom.map((ele, i) => {
             return (
