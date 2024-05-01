@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Navbar from "./Components/Comman/Navbar";
 import OpenRoutes from "./Components/cores/Auth/OpenRoutes";
 import Signup from "./pages/Signup";
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
         <Route path="/signup" element={<OpenRoutes>
           <Signup/>
         </OpenRoutes>}/>
+
+        <Route path="/login" element={<OpenRoutes>
+          <Login/>
+        </OpenRoutes>}/>
+      
       </Routes>
     </div>
   );

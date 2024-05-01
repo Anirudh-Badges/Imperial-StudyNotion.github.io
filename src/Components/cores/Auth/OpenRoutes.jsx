@@ -6,7 +6,7 @@ import { Navigate } from 'react-router-dom';
 
 const OpenRoutes = ({children}) => {
    
-    const token = useSelector((state) => state.auth);
+    const {token} = useSelector((state) => state.auth);
 
     if(token === null){
         return children;

@@ -4,21 +4,19 @@ import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
-    email,
-    password,
+    email: "",
+    password: "",
   });
 
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState("false");
 
   const { email, password } = formData;
 
   const handleOnChange = (e) => {
-    setFormData((prevData) => {
-      setFormData((prevData) => ({
-        ...prevData,
-        [e.target.name]: e.target.value,
-      }));
-    });
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   return (
@@ -40,14 +38,14 @@ const LoginForm = () => {
           className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
         />
       </label>
-      <label className="w-full">
+      <label className="relative">
         <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
           Password <sup className="text-pink-200">*</sup>
         </p>
         <input
           required
           name="password"
-          type="password"
+          type={showPassword ? "text" : "password"}
           onChange={handleOnChange}
           placeholder="Enter the password"
           value={password}
@@ -60,7 +58,7 @@ const LoginForm = () => {
           onClick={() => setShowPassword((prev) => !prev)}
           className="absolute right-3 top-[38px] z-[10] cursor-pointer"
         >
-          {showPassword ? (
+          {!showPassword ? (
             <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
           ) : (
             <AiOutlineEye fontSize={24} fill="#AFB2BF" />
@@ -75,9 +73,9 @@ const LoginForm = () => {
 
       <button
         type="submit"
-        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-800"
+        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-semibold text-richblack-800"
       >
-        Sign IN
+        Sign In
       </button>
     </form>
   );

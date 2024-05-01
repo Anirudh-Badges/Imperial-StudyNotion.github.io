@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import countrycode from "../../../data/countrycode.json";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-// import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
-    firstName,
-    lastName,
-    emailAddress,
-    phonenumber,
-    password,
-    confirmpassword,
+    firstName: "",
+    lastName: "",
+    emailAddress: "",
+    phonenumber: "",
+    password: "",
+    confirmpassword: "",
   });
 
   const [showPassword, setShowPassword] = useState("false");
+  const [showConfirmPassword,setShowComfirmPassword] = useState('false');
+
   const {
     firstName,
     lastName,
@@ -31,7 +32,7 @@ const SignupForm = () => {
   };
 
   return (
-    <form>
+    <form className="space-y-2">
       <div className="flex gap-x-4">
         <label>
           <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
@@ -42,6 +43,7 @@ const SignupForm = () => {
             required
             placeholder="Enter firstName"
             value={firstName}
+            onChange={handleOnChange}
             name="firstName"
             style={{
               boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
@@ -59,6 +61,7 @@ const SignupForm = () => {
             name="lastName"
             value={lastName}
             placeholder="Enter lastName"
+            onChange={handleOnChange}
             type="text"
             style={{
               boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
@@ -77,42 +80,57 @@ const SignupForm = () => {
           name="email"
           placeholder="Enter Email Address"
           value={emailAddress}
+          onChange={handleOnChange}
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
           className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
         />
       </label>
-      <div className="flex gap-x-4">
-        <select className="w-[25px]">
-          {countrycode.map((ele, i) => {
-            return <option key={i}>{ele.code}</option>;
-          })}
-        </select>
-        <label>
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-            Phone Number<sup className="text-pink-200">*</sup>
-          </p>
+
+      <label>
+        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+          Phone Number<sup className="text-pink-200">*</sup>
+        </p>
+        <div className="flex gap-x-4">
+          <select
+            style={{
+              boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
+            }}
+            className="w-[55%] rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+          >
+            {countrycode.map((ele, i) => {
+              return (
+                <option key={i} className="flex gap-x-4 ">
+                  <span>{ele.code}</span>
+                  <span className="text-[12px">{`
+              (${ele.country})`}</span>
+                </option>
+              );
+            })}
+          </select>
           <input
-            type="phone"
+            type="text"
             required
             placeholder="12345 67890"
             value={phonenumber}
-            name="phonenumber"
+            name="tel"
+            onChange={handleOnChange}
             style={{
               boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
             }}
             className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
           />
-        </label>
-      </div>
+        </div>
+      </label>
+
       <div className="flex gap-x-4">
         <label className="relative">
           <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
             Password <sup className="text-pink-200">*</sup>
           </p>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             required
             placeholder="Enter password"
             value={password}
@@ -144,7 +162,7 @@ const SignupForm = () => {
             name="confirmpassword"
             value={confirmpassword}
             placeholder="Enter password"
-            type="password"
+            type={showConfirmPassword ? "text" : "password"}
             onChange={handleOnChange}
             style={{
               boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
@@ -152,7 +170,7 @@ const SignupForm = () => {
             className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
           />
           <span
-            onClick={() => setShowPassword((prev) => !prev)}
+            onClick={() => setShowComfirmPassword((prev) => !prev)}
             className="absolute right-3 top-[38px] x-[10] cursor-pointer"
           >
             {showPassword ? (
@@ -165,7 +183,7 @@ const SignupForm = () => {
       </div>
       <button
         type="submit"
-        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-800"
+        className="mt-8 w-full rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-800"
       >
         Create Account
       </button>
