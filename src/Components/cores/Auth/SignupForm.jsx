@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+
 import CountryCode from "../../../data/countrycode.json";
 
 const SignupForm = () => {
@@ -23,7 +25,6 @@ const SignupForm = () => {
         }))
       }
       
-
       const handleOnSubmit = (e) =>{
         e.preventDefault();
         
@@ -36,6 +37,7 @@ const SignupForm = () => {
           })
       }
   return (
+
     <div>
       <form onSubmit={handleOnSubmit} className="flex flex-col gap-y-4 w-full">
         <div className="flex gap-x-4">
@@ -69,6 +71,7 @@ const SignupForm = () => {
           </label>
         </div>
 
+
         <label className="w-full">
           <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
             Email Address <sup className="text-pink-200">*</sup>
@@ -83,6 +86,8 @@ const SignupForm = () => {
             className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
           />
         </label>
+
+
 
         {/* <div>
           <label>
@@ -156,6 +161,7 @@ const SignupForm = () => {
         </button>
       </form>
     </div>
+
   );
 };
 
