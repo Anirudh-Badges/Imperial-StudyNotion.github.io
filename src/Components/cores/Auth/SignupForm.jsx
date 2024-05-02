@@ -1,180 +1,167 @@
 import React, { useState } from "react";
-import countrycode from "../../../data/countrycode.json";
-import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-// import { Link } from "react-router-dom";
+
+
+import CountryCode from "../../../data/countrycode.json";
 
 const SignupForm = () => {
-  const [formData, setFormData] = useState({
-    firstName,
-    lastName,
-    emailAddress,
-    phonenumber,
-    password,
-    confirmpassword,
-  });
-
-  const [showPassword, setShowPassword] = useState("false");
-  const [showConfirmPassword,setShowComfirmPassword] = useState('false');
-
-  const {
-    firstName,
-    lastName,
-    emailAddress,
-    phonenumber,
-    password,
-    confirmpassword,
-  } = formData;
-
-  const handleOnChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [e.target.value]: e.target.value,
-    }));
-  };
-
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      })
+    
+      const [showPassword, setShowPassword] = useState(false)
+      const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+    
+      const { firstName, lastName, email, password, confirmPassword } = formData
+    
+      // Handle input fields, when some value changes
+      const handleOnChange = (e) => {
+        setFormData((prevData) => ({
+          ...prevData,
+          [e.target.name]: e.target.value,
+        }))
+      }
+      
+      const handleOnSubmit = (e) =>{
+        e.preventDefault();
+        
+        setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+          })
+      }
   return (
-    <form>
-      <div className="flex gap-x-4">
-        <label>
+
+    <div>
+      <form onSubmit={handleOnSubmit} className="flex flex-col gap-y-4 w-full">
+        <div className="flex gap-x-4">
+          <label>
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5 ">
+              FirstName <sup className="text-pink-200">*</sup>
+            </p>
+            <input
+              type="text"
+              required
+              placeholder="Enter first name"
+              name="firstName"
+              value={firstName}
+                onChange={handleOnChange}
+              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+            />
+          </label>
+          <label>
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+              LastName <sup className="text-pink-200">*</sup>
+            </p>
+            <input
+              type="text"
+              required
+              placeholder="Enter LastName"
+              name="lastName"
+              value={lastName}
+                onChange={handleOnChange}
+              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+            />
+          </label>
+        </div>
+
+
+        <label className="w-full">
           <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-            FirstName <sup className="text-pink-200">*</sup>
+            Email Address <sup className="text-pink-200">*</sup>
           </p>
           <input
-            type="text"
+            type="email"
+            name="email"
             required
-            placeholder="Enter firstName"
-            value={firstName}
+            placeholder="Enter Email Address"
+            value={email}
             onChange={handleOnChange}
-            name="firstName"
-            style={{
-              boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-            }}
-            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
           />
         </label>
 
-        <label>
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-            LastName <sup className="text-pink-200">*</sup>
-          </p>
-          <input
-            required
-            name="lastName"
-            value={lastName}
-            placeholder="Enter lastName"
-            onChange={handleOnChange}
-            type="text"
-            style={{
-              boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-            }}
-            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
-          />
-        </label>
-      </div>
-      <label className="w-full">
-        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-          Email Address <sup className="text-pink-200">*</sup>
-        </p>
-        <input
-          type="email"
-          required
-          name="email"
-          placeholder="Enter Email Address"
-          value={emailAddress}
-          style={{
-            boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-          }}
-          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
-        />
-      </label>
-      <div className="flex gap-x-4">
-        <select className="w-[25px]">
-          {countrycode.map((ele, i) => {
-            return <option key={i}>{ele.code}</option>;
-          })}
-        </select>
-        <label>
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-            Phone Number<sup className="text-pink-200">*</sup>
-          </p>
-          <input
-            type="phone"
-            required
-            placeholder="12345 67890"
-            value={phonenumber}
-            name="phonenumber"
-            onChange={handleOnChange}
-            style={{
-              boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-            }}
-            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
-          />
-        </label>
-      </div>
-      <div className="flex gap-x-4">
-        <label className="relative">
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-            Password <sup className="text-pink-200">*</sup>
-          </p>
-          <input
-            type="password"
-            required
-            placeholder="Enter password"
-            value={password}
-            name="password"
-            onChange={handleOnChange}
-            style={{
-              boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-            }}
-            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
-          />
-          <span
-            onClick={() => setShowPassword((prev) => !prev)}
-            className="absolute right-3 top-[38px] x-[10] cursor-pointer"
-          >
-            {showPassword ? (
-              <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
-            ) : (
-              <AiOutlineEye fontSize={24} fill="#AFB2BF" />
-            )}
-          </span>
-        </label>
 
-        <label className="relative">
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-            Confirm Password<sup className="text-pink-200">*</sup>
-          </p>
-          <input
-            required
-            name="confirmpassword"
-            value={confirmpassword}
-            placeholder="Enter password"
-            type="password"
-            onChange={handleOnChange}
-            style={{
-              boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-            }}
-            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
-          />
-          <span
-            onClick={() => setShowPassword((prev) => !prev)}
-            className="absolute right-3 top-[38px] x-[10] cursor-pointer"
-          >
-            {showPassword ? (
-              <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
-            ) : (
-              <AiOutlineEye fontSize={24} fill="#AFB2BF" />
-            )}
-          </span>
-        </label>
-      </div>
-      <button
-        type="submit"
-        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-800"
-      >
-        Create Account
-      </button>
-    </form>
+
+        {/* <div>
+          <label>
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+              Phone Number <sup className="text-pink-200">*</sup>
+            </p>
+            <div className="flex gap-x-4">
+              <select
+                name="Contry-Code"
+                id=""
+                className="w-[100px] rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+              >
+                {CountryCode.map((ele, i) => {
+                  return (
+                    <option value="CountryCode" key={i}>
+                      {ele.code}
+                    </option>
+                  );
+                })}
+              </select>
+              <input
+                type="tel"
+                required
+                placeholder="12345-67890"
+                name="phoneNumber"
+                value={phoneNumber}
+                onChange={handleOnChange}
+                className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+              />
+            </div>
+          </label>
+        </div> */}
+
+        <div className="flex gap-x-4">
+          <label>
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+              Create Password <sup className="text-pink-200">*</sup>
+            </p>
+            <input
+              type={showPassword ? "text" : "password"}
+              required
+              placeholder="Enter password"
+              name="password"
+              value={password}
+                onChange={handleOnChange}
+              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+            />
+          </label>
+
+          <label>
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+              Confirm Password <sup className="text-pink-200">*</sup>
+            </p>
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              required
+              placeholder="Enter confirm password"
+              name="confirmPassword"
+              value={confirmPassword}
+                onChange={handleOnChange}
+              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+            />
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-semibold text-richblack-900"
+        >
+          Create Account
+        </button>
+      </form>
+    </div>
+
   );
 };
 
