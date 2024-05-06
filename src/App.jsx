@@ -5,6 +5,7 @@ import Navbar from "./Components/Comman/Navbar";
 import OpenRoutes from "./Components/cores/Auth/OpenRoutes";
 import Signup from "./pages/Signup";
 import Login from './pages/Login';
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Login/>
         </OpenRoutes>}/>
       
+
+         <Route path="/about" element={<AboutPage/>}/>
       </Routes>
     </div>
   );
