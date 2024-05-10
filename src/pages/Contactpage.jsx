@@ -1,21 +1,17 @@
 import React from 'react';
-import GetInTouchForm from '../Components/cores/aboutus/GetInTouchForm';
+import GetInTouchForm from '../Components/cores/About/GetInTouchForm'
+import Footer from '../Components/Comman/Footer';
 
 const Contactpage = () => {
     return (
         <div>
-            <div className='w-11/12 max-w-maxContent mx-auto flex item-center justify-center space-x-20 mt-10'>
-                <div className=' bg-richblack-700 max-w-maxContent p-10 w-[400px] space-y-6 h-fit rounded-md'>
+            <div className='w-11/12 max-w-maxContent mx-auto flex item-center justify-center space-x-20 mt-10 mb-10 '>
+                <div className=' bg-richblack-700 p-10 w-[50%] space-y-6 h-fit rounded-md'>
                     <div>
                         {/* icon */}
-                        <div>
-
-                        </div>
-                        <div>
                         <h2 className='text-white font-semibold text-[20px]'>Chat on us</h2>
                         <p className='text-richblack-200 font-medium'>Our friendly team is here for help.</p>
                         <p className='text-richblack-200 font-medium'>@mail address</p>
-                        </div>
                     </div>
                     <div>
                         {/* icon */}
@@ -30,11 +26,12 @@ const Contactpage = () => {
                         <p className='text-richblack-200 font-medium'>+123 456 7890</p>
                     </div>
                 </div>
-                <div className='w-[45%] border-[1px] border-richblack-600 p-3 rounded-md'>
-                    <GetInTouchForm title={"Got a Idea? We've got the skills. Let's team up"}
+                <div className='w-[45%] py-8 border-2 border-richblack-600 rounded-md max-w-maxContent'>
+                    <GetInTouchForm title={"Got a Idea? We've got the skills Let's team up"}
                         description={"Talk us more about yourself and what you're not in mind."} />
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

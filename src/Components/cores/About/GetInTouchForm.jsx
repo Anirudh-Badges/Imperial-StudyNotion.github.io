@@ -98,7 +98,7 @@ const GetInTouchForm = ({title, description}) => {
                             <select
                                 name="Contry-Code"
                                 id=""
-                                className="w-[150px] rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+                                className="w-[200px] rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
                             >
                                 {CountryCode.map((ele, i) => {
                                     return (
