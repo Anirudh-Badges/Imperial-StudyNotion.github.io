@@ -6,7 +6,7 @@ const Contactpage = () => {
     return (
         <div>
             <div className='w-11/12 max-w-maxContent mx-auto flex item-center justify-center space-x-20 mt-10 mb-10 '>
-                <div className=' bg-richblack-700 p-10 w-[50%] space-y-6 h-fit rounded-md'>
+                <div className=' bg-richblack-700 p-10 w-[40%] space-y-6 h-fit rounded-md'>
                     <div>
                         {/* icon */}
                         <h2 className='text-white font-semibold text-[20px]'>Chat on us</h2>

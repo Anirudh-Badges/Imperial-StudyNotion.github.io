@@ -36,7 +36,7 @@ const GetInTouchForm = ({title, description}) => {
     return (
         <div className='w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-center gap-10'>
             <div className='flex flex-col items-center justify-center  gap-4' >
-                <h1 className='text-3xl text-richblack-5 font-semibold'> {title}</h1>
+                <h1 className='text-3xl text-richblack-5 font-semibold text-center'> {title}</h1>
                 <p className='text-richblack-500 '>{description}</p>
             </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FaLongArrowAltLeft } from "react-icons/fa";
@@ -17,18 +17,18 @@ const ForgetPassword = () => {
                 ) : (<div className=' max-w-[500px] space-y-5'>
                     <h1 className=' text-3xl font-semibold'>
                         {
-                            !emailSent ? "Reset Your Email" : "Check Email"
+                            emailSent ? "Reset Your Email" : "Check Email"
                         }
                     </h1>
                     <p className=' text-richblack-500 text-[18px] '>
                         {
-                            !emailSent ? "Have no fear. We'll email you instructions to reset your password. If you dont have access to your email we can try email recovery"
+                            emailSent ? "Have no fear. We'll email you instructions to reset your password. If you dont have access to your email we can try email recovery"
                                 : `We have sent the reset email to your ${email} `
                         }
                     </p>
-                    <form onSubmit={handleOnSubmit} c>
+                    <form  >
                         {
-                            !emailSent && (
+                            emailSent && (
                                 <label>
                                     <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
                                         Email Address <sup className="text-pink-200">*</sup>
