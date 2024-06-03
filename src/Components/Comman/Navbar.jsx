@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/Images/logowhite.png"
 import { NavbarLinks } from "../../data/navbar-links";
+import { CTAButton } from "../cores/Homepage/CTAButton";
 
 const Navbar = () => {
   return (
@@ -37,7 +38,9 @@ const Navbar = () => {
         </div>
 
         <div>
-          <div>
+          <div className="flex items-center justify-center gap-6">
+            {/* <CTAButton text={"Login"} active={false} path={"/login"}/>
+            <CTAButton text={"Sign Up"} active={false} path={"/signup"} /> */}
             
           </div>
         </div>
