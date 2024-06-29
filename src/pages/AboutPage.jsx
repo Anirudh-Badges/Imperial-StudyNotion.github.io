@@ -6,6 +6,7 @@ import about3 from "../assets/Images/aboutus3.webp";
 import foundingStory from "../assets/Images/FoundingStory.png";
 import Footer from "../Components/Comman/Footer";
 import GetInTouchForm from "../Components/cores/About/GetInTouchForm";
+// import LearningGrid from "../Components/cores/About/LearningGrid";
 
 
 const visitors = [
@@ -140,6 +141,8 @@ const AboutPage = () => {
             </div>
         </div>
       </section>
+      {/* learningGrid */}
+      {/* <LearningGrid/> */}
       {/* GetinTouch  */}
       <GetInTouchForm
         title={"Get In Touch"}

@@ -4,12 +4,16 @@ import Homepage from "./pages/Homepage";
 import Navbar from "./Components/Comman/Navbar";
 import OpenRoutes from "./Components/cores/Auth/OpenRoutes";
 import Signup from "./pages/Signup";
-import Login from './pages/Login';
+import Login from "./pages/Login";
 import AboutPage from "./pages/AboutPage";
-import Contactpage from './pages/Contactpage';
+import Contactpage from "./pages/Contactpage";
 import ForgetPassword from "./pages/ForgetPassword";
-import VerifyEmail from './pages/VerifyEmail';
+import VerifyEmail from "./pages/VerifyEmail";
 import UpdatePassword from "./pages/UpdatePassword";
+import PrivateRoutes from "./Components/cores/Auth/PrivateRoutes";
+import Dashboard from "./pages/Dashboard";
+import MyProfile from "./Components/cores/Dashboard/MyProfile";
+import MyCourses from "./Components/cores/Dashboard/MyCourses"
 
 function App() {
   return (
@@ -18,15 +22,33 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
 
-        <Route path="/signup" element={<OpenRoutes>
-          <Signup />
-        </OpenRoutes>} />
+        <Route
+          path="/signup"
+          element={
+            <OpenRoutes>
+              <Signup />
+            </OpenRoutes>
+          }
+        />
 
-        <Route path="/login" element={<OpenRoutes>
-          <Login />
-        </OpenRoutes>} />
+        <Route
+          path="/login"
+          element={
+            <OpenRoutes>
+              <Login />
+            </OpenRoutes>
+          }
+        />
 
-        <Route path="/forgot-password" element={<OpenRoutes> <ForgetPassword /> </OpenRoutes>} />
+        <Route
+          path="/forgot-password"
+          element={
+            <OpenRoutes>
+              {" "}
+              <ForgetPassword />{" "}
+            </OpenRoutes>
+          }
+        />
 
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<Contactpage />} />
@@ -37,11 +59,25 @@ function App() {
               <VerifyEmail />
             </OpenRoutes>
           }
-        /> 
-        <Route path="update-password" element ={
-          <OpenRoutes> <UpdatePassword/></OpenRoutes>
-        } />
-
+        />
+        <Route
+          path="update-password"
+          element={
+            <OpenRoutes>
+              {" "}
+              <UpdatePassword />
+            </OpenRoutes>
+          }
+        />
+        <Route
+          element={
+            <PrivateRoutes>
+              <Dashboard />
+            </PrivateRoutes>
+          }
+        />
+        <Route path="dashboard/my-profile" element={<MyProfile />} />
+        <Route path="dashboard/my-courses" element={ <MyCourses />} />
       </Routes>
     </div>
   );
