@@ -6,7 +6,6 @@ import about3 from "../assets/Images/aboutus3.webp";
 import foundingStory from "../assets/Images/FoundingStory.png";
 import Footer from "../Components/Comman/Footer";
 import GetInTouchForm from "../Components/cores/About/GetInTouchForm";
-import GridSection from "../Components/cores/About/LearningGrid";
 
 
 const visitors = [
@@ -127,7 +126,7 @@ const AboutPage = () => {
       {/* section-5  */}
       <section className="bg-richblack-800 h-[150px] mb-5">
         <div className="w-11/12 mx-auto max-w-maxContent flex items-center justify-center gap-10 text-richblack-500">
-            <div className="flex items-center justify-between gap-24 lg:flex-row flex-col">
+            <div className="flex items-center justify-between gap-32 lg:flex-row flex-col">
                 {
                     visitors.map((ele,i) => {
                         return(
@@ -141,8 +140,6 @@ const AboutPage = () => {
             </div>
         </div>
       </section>
-      {/* learningGrid */}
-      <GridSection/>
       {/* GetinTouch  */}
       <GetInTouchForm
         title={"Get In Touch"}

@@ -15,7 +15,6 @@ const UpdatePassword = () => {
     const { loading } = useSelector((state) => state.auth);
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-    
     const { password, confirmPassword } = formData
     
     const handleOnChange = (e) => {
@@ -88,14 +87,14 @@ const UpdatePassword = () => {
                     </label>
                     <button type="submit"
                         className="w-full bg-yellow-50 py-[12px] px-[12px] rounded-[8px] mt-6 font-medium text-richblack-900" >
-                        Update Password
+                        Reset Password
                     </button>
                 </form>
                 <div className="mt-6 flex items-center justify-between">
-                    <Link to="/signup">
+                    <Link to="/login">
                         <div className='text-richblack-5 flex items-center gap-x-2'>
                             <FaLongArrowAltLeft className=' mt-1' />
-                            <p>Back to Sign Up</p>
+                            <p>Back to Login</p>
                         </div>
                     </Link>
                 </div>
