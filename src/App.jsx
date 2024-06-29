@@ -10,7 +10,7 @@ import Contactpage from "./pages/Contactpage";
 import ForgetPassword from "./pages/ForgetPassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import UpdatePassword from "./pages/UpdatePassword";
-import PrivateRoutes from "./Components/cores/Auth/PrivateRoutes";
+import PrivateRoute from "./Components/cores/Auth/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
 import MyProfile from "./Components/cores/Dashboard/MyProfile";
 import MyCourses from "./Components/cores/Dashboard/MyCourses"
@@ -71,9 +71,9 @@ function App() {
         />
         <Route
           element={
-            <PrivateRoutes>
+            <PrivateRoute>
               <Dashboard />
-            </PrivateRoutes>
+            </PrivateRoute>
           }
         />
         <Route path="dashboard/my-profile" element={<MyProfile />} />
