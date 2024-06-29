@@ -6,27 +6,26 @@ import about3 from "../assets/Images/aboutus3.webp";
 import foundingStory from "../assets/Images/FoundingStory.png";
 import Footer from "../Components/Comman/Footer";
 import GetInTouchForm from "../Components/cores/About/GetInTouchForm";
-
+import GridSection from "../Components/cores/About/GridSection";
 
 const visitors = [
-    {
-        title:"5K",
-        name:"Active Students",
-    },
-    {
-        title:"10+",
-        name:"Mentors",
-    },
-    {
-        title: "200+",
-        name:"Courses",
-    },
-    {
-        title: "50+",
-        name: "Awards",
-    }
-
-]
+  {
+    title: "5K",
+    name: "Active Students",
+  },
+  {
+    title: "10+",
+    name: "Mentors",
+  },
+  {
+    title: "200+",
+    name: "Courses",
+  },
+  {
+    title: "50+",
+    name: "Awards",
+  },
+];
 const AboutPage = () => {
   return (
     <div>
@@ -101,44 +100,65 @@ const AboutPage = () => {
       {/* Section-4  */}
       <section>
         <div className="w-11/12 mx-auto max-w-maxContent flex  items-center justify-center gap-8 text-richblack-500 mb-6">
-            <div className="flex lg:flex-row flex-col items-center justify-between gap-10 ">
-                
-
-                {/* left-section  */}
-                <div className="lg:w-[50%] flex flex-col gap-2 p-10">
-                    <h1 className=" bg-gradient-to-b from-[#FF512F] to-[#F09819] text-transparent bg-clip-text font-bold text-4xl mb-3 ">Our Vision</h1>
-                    <p className="text-base font-medium text-richblack-300 lg:w-[85%]">
-                    With this vision in mind, we set out on a journey to create an e-learning platform that would revolutionize the way people learn. Our team of dedicated experts worked tirelessly to develop a robust and intuitive platform that combines cutting-edge technology with engaging content, fostering a dynamic and interactive learning experience.
-                    </p>
-                </div>
-
-                {/* right-section  */}
-                <div className="flex flex-col lg:w-[50%] gap-2 p-10 ">
-                    <h1 className="text-4xl mb-3 "> <Heading text={"Our Mission"} /></h1>
-                    <p className="text-base font-medium text-richblack-300 ">
-                    our mission goes beyond just delivering courses online. We wanted to create a vibrant community of learners, where individuals can connect, collaborate, and learn from one another. We believe that knowledge thrives in an environment of sharing and dialogue, and we foster this spirit of collaboration through forums, live sessions, and networking opportunities.
-                    </p>
-                </div>
+          <div className="flex lg:flex-row flex-col items-center justify-between gap-10 ">
+            {/* left-section  */}
+            <div className="lg:w-[50%] flex flex-col gap-2 p-10">
+              <h1 className=" bg-gradient-to-b from-[#FF512F] to-[#F09819] text-transparent bg-clip-text font-bold text-4xl mb-3 ">
+                Our Vision
+              </h1>
+              <p className="text-base font-medium text-richblack-300 lg:w-[85%]">
+                With this vision in mind, we set out on a journey to create an
+                e-learning platform that would revolutionize the way people
+                learn. Our team of dedicated experts worked tirelessly to
+                develop a robust and intuitive platform that combines
+                cutting-edge technology with engaging content, fostering a
+                dynamic and interactive learning experience.
+              </p>
             </div>
+
+            {/* right-section  */}
+            <div className="flex flex-col lg:w-[50%] gap-2 p-10 ">
+              <h1 className="text-4xl mb-3 ">
+                {" "}
+                <Heading text={"Our Mission"} />
+              </h1>
+              <p className="text-base font-medium text-richblack-300 ">
+                our mission goes beyond just delivering courses online. We
+                wanted to create a vibrant community of learners, where
+                individuals can connect, collaborate, and learn from one
+                another. We believe that knowledge thrives in an environment of
+                sharing and dialogue, and we foster this spirit of collaboration
+                through forums, live sessions, and networking opportunities.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* section-5  */}
       <section className="bg-richblack-800 h-[150px] mb-5">
         <div className="w-11/12 mx-auto max-w-maxContent flex items-center justify-center gap-10 text-richblack-500">
-            <div className="flex items-center justify-between gap-32 lg:flex-row flex-col">
-                {
-                    visitors.map((ele,i) => {
-                        return(
-                            <div key={i} className="flex flex-col items-center justify-center p-11 gap-2">
-                                <h1 className="text-white text-3xl font-semibold">{ele.title}</h1>
-                                <span className="font-semibold">{ele.name}</span>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+          <div className="flex items-center justify-between gap-32 lg:flex-row flex-col">
+            {visitors.map((ele, i) => {
+              return (
+                <div
+                  key={i}
+                  className="flex flex-col items-center justify-center p-11 gap-2"
+                >
+                  <h1 className="text-white text-3xl font-semibold">
+                    {ele.title}
+                  </h1>
+                  <span className="font-semibold">{ele.name}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
+      </section>
+
+      {/* Grid Section */}
+      <section>
+        <GridSection />
       </section>
       {/* GetinTouch  */}
       <GetInTouchForm
