@@ -25,4 +25,3 @@ dist-ssr
 
 /Server/node_modules
 /Server/.env
-/Server/.gitignore
