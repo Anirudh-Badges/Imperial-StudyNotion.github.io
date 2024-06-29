@@ -6,7 +6,6 @@ import about3 from "../assets/Images/aboutus3.webp";
 import foundingStory from "../assets/Images/FoundingStory.png";
 import Footer from "../Components/Comman/Footer";
 import GetInTouchForm from "../Components/cores/About/GetInTouchForm";
-import GridSection from "../Components/cores/About/GridSection";
 
 
 const visitors = [
@@ -141,13 +140,6 @@ const AboutPage = () => {
             </div>
         </div>
       </section>
-
-      <section>
-        <div className=" mt-20 mb-10">
-          <GridSection/>
-        </div>
-      </section>
-      
       {/* GetinTouch  */}
       <GetInTouchForm
         title={"Get In Touch"}

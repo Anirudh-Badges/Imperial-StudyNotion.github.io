@@ -10,7 +10,7 @@ import InstructorSection from "../Components/cores/Homepage/InstructorSection";
 import ReviewSection from "../Components/cores/Homepage/ReviewSection";
 import LearnLanguage from "../Components/cores/Homepage/LearnLanguage";
 import Footer from "../Components/Comman/Footer";
-import ExporeCourses from "../Components/cores/Homepage/ExporeCourses";
+import ExploreCourses from "../Components/cores/Homepage/ExporeCourses";
 
 const Homepage = () => {
   return (
@@ -120,7 +120,7 @@ const Homepage = () => {
         </div>    
 
         {/*Explore-Section  */}
-        <ExporeCourses/>
+        <ExploreCourses/>
       </div>
 
       {/* Homepage-middle-section2 */}
