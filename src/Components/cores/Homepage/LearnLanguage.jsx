@@ -18,12 +18,12 @@ const LearnLanguage = () => {
                 progress tracking, custom schedule and more.
             </div>
 
-            <div className='flex flex-row items-center justify-center mt-5 '>
+            <div className='flex sm:flex-row flex-col items-center justify-center mt-16 '>
                 <img src={Know_your_progress} alt="img1"
-                className=' -mr-28 ' />
-                <img src={Compare_with_others} alt="img2" className=''/>
+                className=' sm:-mr-28 ' />
+                <img src={Compare_with_others} alt="img2" className='-mt-24'/>
                 <img src={Plan_your_lessons} alt="img3" 
-                className=' -ml-36 '/>
+                className=' sm:-ml-36 -mt-24'/>
             </div>
 
             <div className='mt-3 mb-20 '>

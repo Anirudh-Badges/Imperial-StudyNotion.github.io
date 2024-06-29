@@ -143,7 +143,7 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div className="w-11/12 mx-auto flex sm:flex-col justify-between items-center max-w-maxContent gap-8">
+        <div className="w-11/12 mx-auto flex flex-col sm:flex-col md:flex-col justify-between items-center max-w-maxContent gap-8">
           <div className="mb-10 mt-[-100px] flex flex-col justify-between gap-7 lg:mt-20 lg:flex-row lg:gap-0">
             <div className="text-richblack-900 text-4xl font-semibold lg:w-[45%]">
               Get the Skills you need for a
